@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 import torch.nn as nn
+from model import NeuralNetwork
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 
@@ -16,10 +17,10 @@ targets = torch.from_numpy(targets)
 
 # Dataset and DataLoader
 train_ds = TensorDataset(inputs, targets)
-train_dl = DataLoader(dataset=train_ds, batch_size=8, shuffle=True)
+train_dl = DataLoader(dataset=train_ds, batch_size=4, shuffle=True)
 
 # Model
-model = nn.Linear(inputs.shape[1], 1)
+model = NeuralNetwork(inputs.shape[1], 1)
 criterion = nn.MSELoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-6)
 

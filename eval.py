@@ -1,6 +1,7 @@
 import numpy as np
 import torch
-import torch.nn as nn
+from model import NeuralNetwork
+
 
 # Loading training data file
 FILE = "Data/data.pth"
@@ -13,7 +14,7 @@ inputs = data["inputs"]
 targets = data["targets"]
 
 # Model
-model = nn.Linear(input_size, output_size)
+model = NeuralNetwork(input_size, output_size)
 model.load_state_dict(model_state)
 model.eval()
 
