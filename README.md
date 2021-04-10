@@ -1,5 +1,5 @@
 # BostonHousing
-Linear pyTorch model that predicts housing values in suburbs of Boston
+Linear pyTorch model that predicts housing values in suburbs of Boston. To train the model run train.py and to evaluate the model run eval.py
 
 Data for the model available at https://www.kaggle.com/c/boston-housing/overview or see Data/housing.csv\
 Prediction of the model is available at Data/predictions_and_targets.csv
